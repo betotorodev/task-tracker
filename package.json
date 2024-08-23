@@ -1,0 +1,22 @@
+{
+  "name": "task-tracker",
+  "version": "1.0.0",
+  "description": "A task tracker app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "add": "node --no-warnings add.js",
+    "update": "node --no-warnings update.js",
+    "delete": "node --no-warnings delete.js",
+    "mark:to-do": "node --no-warnings set-status.js 'to do'",
+    "mark:in-progress": "node --no-warnings set-status.js 'in progress'",
+    "mark:done": "node --no-warnings set-status.js done",
+    "list:all": "node --no-warnings list.js all",
+    "list:to-to": "node --no-warnings list.js 'to-do'",
+    "list:in-progress": "node --no-warnings list.js 'in-progress'",
+    "list:done": "node --no-warnings list.js done"
+  },
+  "keywords": ["task", "tracker", "app", "node"],
+  "author": "Beto Toro",
+  "license": "ISC"
+}
