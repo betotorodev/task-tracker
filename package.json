@@ -1,5 +1,7 @@
 {
   "name": "task-tracker",
+  "author": "Beto Toro",
+  "keywords": ["task", "tracker", "app", "node"],
   "version": "1.0.0",
   "description": "A task tracker app",
   "main": "index.js",
@@ -16,7 +18,5 @@
     "list:in-progress": "node --no-warnings src/list.js 'in-progress'",
     "list:done": "node --no-warnings src/list.js done"
   },
-  "keywords": ["task", "tracker", "app", "node"],
-  "author": "Beto Toro",
-  "license": "ISC"
+  "license": "MIT"
 }
