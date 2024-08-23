@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import todos from './tasks.json' assert { type: 'json' }
+import todos from '../tasks.json' assert { type: 'json' }
 
 
 const task = process.argv.slice(2)

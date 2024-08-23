@@ -1,5 +1,5 @@
-import { tasksStatus } from './const'
-import todos from './tasks.json' assert { type: 'json' }
+import { tasksStatus } from '../const'
+import todos from '../tasks.json' assert { type: 'json' }
 
 const task = process.argv.slice(2)
 const [type] = task

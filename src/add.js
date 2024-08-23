@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import { tasksStatus } from './const.js'
+import { tasksStatus } from '../const.js'
 
 const task = process.argv.slice(2)
 const [taskName] = task
