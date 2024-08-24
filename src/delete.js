@@ -5,6 +5,11 @@ import todos from '../tasks.json' assert { type: 'json' }
 const task = process.argv.slice(2)
 const [id] = task
 
+if (task.length > 1) {
+  console.log('Please provide only the Id of the task to delete')
+  process.exit(0)
+}
+
 if ( todos.length === 0 ) {
   console.log('No tasks to delete')
   process.exit(0)

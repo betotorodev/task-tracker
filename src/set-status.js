@@ -4,6 +4,11 @@ import todos from '../tasks.json' assert { type: 'json' }
 const task = process.argv.slice(2)
 const [status, id] = task
 
+if (task.length > 1) {
+  console.log('You just need to provide the task ID')
+  process.exit(0)
+}
+
 if ( todos.length === 0 ) {
   console.log(`No tasks to mark in ${status}`)
   process.exit(0)
