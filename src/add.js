@@ -24,7 +24,13 @@ if (tasks.some((task) => task.task === taskName)) {
 const currentId = Number(fs.readFileSync('counter-id.txt', 'utf-8'))
 
 const newId = tasks.length === 0 ? currentId : currentId + 1
-const newTask = { id: newId, task: taskName, status: tasksStatus.TODO }
+const newTask = { 
+  id: newId, 
+  task: taskName, 
+  status: tasksStatus.TODO,
+  createdAt: new Date().toISOString(),
+  updatedAt: null
+}
 
 tasks = [...tasks, newTask]
 
