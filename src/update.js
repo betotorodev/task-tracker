@@ -1,4 +1,5 @@
-import todos from '../tasks.json' assert { type: 'json' }
+import fs from 'node:fs'
+import todos from '../tasks.json' with { type: 'json' }
 
 const task = process.argv.slice(2)
 const [idValue, message] = task
@@ -43,6 +44,12 @@ if ( todos.length === 0 ) {
 const taskToUpdate = todos.find((todo) => todo.id === Number(id))
 taskToUpdate.task = message
 taskToUpdate.updatedAt = new Date().toISOString()
+todos[todos.indexOf(taskToUpdate)] = taskToUpdate
 
-console.log(`Task updated successfully!, Id: ${id}`)
-console.table(todos)
+fs.writeFile('tasks.json', JSON.stringify(todos), (err) => {
+  if (err) {
+    console.log('Error:', err)
+  }
+  console.log(`Task updated successfully!, Id: ${id}`)
+  console.table(todos)
+})
