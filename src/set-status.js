@@ -1,11 +1,11 @@
 import fs from 'node:fs'
-import todos from '../tasks.json' assert { type: 'json' }
+import todos from '../tasks.json' with { type: 'json' }
 
 const task = process.argv.slice(2)
 const [status, id] = task
 
-if (task.length > 1) {
-  console.log('You just need to provide the task ID')
+if (task.length > 2) {
+  console.log('You just need to provide the task ID', task)
   process.exit(0)
 }
 
